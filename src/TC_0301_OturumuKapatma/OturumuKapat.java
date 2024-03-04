@@ -61,7 +61,6 @@ public class OturumuKapat extends BaseDriver {
         Assert.assertEquals(yonlendirme, "Anasayfaya gitmek için tıklayın");
         System.out.println("yonlendirme = " + yonlendirme);
 
-
         BekleKapat();
     }
 }
