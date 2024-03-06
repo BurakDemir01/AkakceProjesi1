@@ -1,4 +1,4 @@
-package Same_US;
+package US_101;
 
 import Utility.MyFunc;
 import org.junit.Test;
@@ -18,7 +18,6 @@ public class TC_0102_BasarisizHesapOlusturma {
 
         WebElement hesapAc = driver.findElement(By.xpath("(//header[@id='Marvin']//div)[5]//a[1]"));
         Actions aksiyonDriver = new Actions(driver);
-
         Action action = aksiyonDriver.moveToElement(hesapAc).click().build();
         wait.until(ExpectedConditions.visibilityOf(hesapAc));
         action.perform();
@@ -36,7 +35,6 @@ public class TC_0102_BasarisizHesapOlusturma {
 
         WebElement email = driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[3]//input\n"));
         new Actions(driver).moveToElement(email).click().sendKeys(" ").build().perform();
-
 
         WebElement email2 = driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[4]//input\n"));
         new Actions(driver).moveToElement(email2).click().sendKeys(" ").build().perform();
