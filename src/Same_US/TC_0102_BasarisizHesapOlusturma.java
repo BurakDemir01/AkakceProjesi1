@@ -1,4 +1,4 @@
-package US_101_TC_0102;
+package Same_US;
 
 import Utility.MyFunc;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package US_101_KullaniciHesabiOlusturma;
+package US_1;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
