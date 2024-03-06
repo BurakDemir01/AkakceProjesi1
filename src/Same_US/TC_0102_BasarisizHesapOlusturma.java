@@ -23,7 +23,6 @@ public class TC_0102_BasarisizHesapOlusturma {
         wait.until(ExpectedConditions.visibilityOf(hesapAc));
         action.perform();
 
-
         wait.until(ExpectedConditions.urlContains("giris"));
 
         WebElement kullaniciAdi = driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[1]//input"));
