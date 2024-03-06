@@ -22,7 +22,6 @@ public class TC_0102_BasarisizHesapOlusturma {
         Action action = aksiyonDriver.moveToElement(hesapAc).click().build();
         wait.until(ExpectedConditions.visibilityOf(hesapAc));
         action.perform();
-
         wait.until(ExpectedConditions.urlContains("giris"));
 
         WebElement kullaniciAdi = driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[1]//input"));
@@ -30,7 +29,6 @@ public class TC_0102_BasarisizHesapOlusturma {
 
         kullaniciAdi.sendKeys("Burak");
         // new Actions(driver).moveToElement(kullaniciAdi).click().sendKeys("Selen").build().perform();
-
 
         WebElement soyad = driver.findElement(By.cssSelector("[id='rnufs']"));
         soyad.sendKeys("Project");
@@ -75,12 +73,10 @@ public class TC_0102_BasarisizHesapOlusturma {
         Select ayMenu = new Select(ay);
         ayMenu.selectByValue("8");
 
-
         WebElement yil = driver.findElement(By.xpath("((//form[@id='FrmRnuS']//span)[10]//select)[3]"));
         yil.click();
         Select yilMenu = new Select(yil);
         yilMenu.selectByValue("2003");
-
 
         WebElement checkBox1 = driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[14]//input"));
         checkBox1.click();
