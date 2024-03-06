@@ -1,20 +1,15 @@
 package US_106_MessageBoxCheck;
 
 import Utility.BaseDriver;
-import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.security.Key;
-
-public class MesajKutusuKontrolu extends BaseDriver {
+public class TC_0601_MesajKutusuKontrolu extends BaseDriver {
 
     @Test
     public void MessageBoxCheck_TC_0601() {
