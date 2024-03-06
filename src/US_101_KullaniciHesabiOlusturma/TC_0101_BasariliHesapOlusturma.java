@@ -87,17 +87,11 @@ public class TC_0101_BasariliHesapOlusturma extends BaseDriver {
         WebElement checkBox1= driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[14]//input"));
         checkBox1.click();
 
-
         WebElement checkBox2= driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[15]//input"));
         checkBox2.click();
 
         WebElement hesapAcBtn= driver.findElement(By.xpath("((//form[@id='FrmRnuS'])//input)[17]"));
         hesapAcBtn.click();
-
-
-
-
-
 
         BekleKapat();
 

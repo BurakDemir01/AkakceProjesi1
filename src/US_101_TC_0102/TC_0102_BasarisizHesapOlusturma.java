@@ -1,4 +1,4 @@
-package US_101_KullaniciHesabiOlusturma;
+package US_101_TC_0102;
 
 import Utility.MyFunc;
 import org.junit.Test;
