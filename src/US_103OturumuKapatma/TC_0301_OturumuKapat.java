@@ -1,4 +1,4 @@
-package TC_0301_OturumuKapatma;
+package US_103OturumuKapatma;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class OturumuKapat extends BaseDriver {
+public class TC_0301_OturumuKapat extends BaseDriver {
     @Test
     public void Test3() {
         driver.get("https://www.akakce.com/");
@@ -62,5 +62,6 @@ public class OturumuKapat extends BaseDriver {
         System.out.println("yonlendirme = " + yonlendirme);
 
         BekleKapat();
+
     }
 }
