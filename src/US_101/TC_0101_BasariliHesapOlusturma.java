@@ -1,4 +1,4 @@
-package US_1;
+package US_101;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -21,8 +21,6 @@ public class TC_0101_BasariliHesapOlusturma extends BaseDriver {
         Action action=aksiyonDriver.moveToElement(hesapAc).click().build();
         wait.until(ExpectedConditions.visibilityOf(hesapAc));
         action.perform();
-
-
         wait.until(ExpectedConditions.urlContains("giris"));
 
         WebElement kullaniciAdi= driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[1]//input"));
@@ -31,15 +29,12 @@ public class TC_0101_BasariliHesapOlusturma extends BaseDriver {
         kullaniciAdi.sendKeys("Selen");
        // new Actions(driver).moveToElement(kullaniciAdi).click().sendKeys("Selen").build().perform();
 
-
-
         WebElement soyad= driver.findElement(By.cssSelector("[id='rnufs']"));
         soyad.sendKeys("Project");
         MyFunc.Bekle(2);
 
         WebElement email= driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[3]//input\n"));
         new Actions(driver).moveToElement(email).click().sendKeys("SeleniumProjectTeam@gmail.com").build().perform();
-
 
         WebElement email2= driver.findElement(By.xpath("(//form[@id='FrmRnuS']//span)[4]//input\n"));
         new Actions(driver).moveToElement(email2).click().sendKeys("SeleniumProjectTeam@gmail.com").build().perform();
