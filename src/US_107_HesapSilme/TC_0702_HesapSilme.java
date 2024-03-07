@@ -20,7 +20,7 @@ public class TC_0702_HesapSilme extends BaseDriver {
         driver.findElement(By.cssSelector("input[id='lifp']")).sendKeys("Bugfighters1234!");
         driver.findElement(By.xpath("//input[@id='lfb']")).click();
         // Navigate to the user profile and click the "Hesabımı Sil" button
-        driver.findElement(By.linkText("Test")).click();
+        driver.findElement(By.linkText("Selen")).click();
         driver.findElement(By.linkText("Hesabımı Sil")).click();
         // Enter a wrong password for account deletion
         driver.findElement(By.cssSelector("input[id='p']")).sendKeys("yanlisSifre" + Keys.ENTER);
