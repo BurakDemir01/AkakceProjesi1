@@ -16,14 +16,14 @@ public class TC_0702 extends BaseDriver {
         // Navigate to the login page
         driver.findElement(By.xpath("//a[text()='Giriş Yap']")).click();
         // Enter the credentials and click the "Giriş Yap" button
-        driver.findElement(By.cssSelector("input[id='life']")).sendKeys("testnomads01@gmail.com");
-        driver.findElement(By.cssSelector("input[id='lifp']")).sendKeys("Nomad07++");
+        driver.findElement(By.cssSelector("input[id='life']")).sendKeys("SeleniumProjectTeam@gmail.com");
+        driver.findElement(By.cssSelector("input[id='lifp']")).sendKeys("Bugfighters1234!");
         driver.findElement(By.xpath("//input[@id='lfb']")).click();
         // Navigate to the user profile and click the "Hesabımı Sil" button
         driver.findElement(By.linkText("Test")).click();
         driver.findElement(By.linkText("Hesabımı Sil")).click();
         // Enter a wrong password for account deletion
-        driver.findElement(By.cssSelector("input[id='p']")).sendKeys("wrongpassword" + Keys.ENTER);
+        driver.findElement(By.cssSelector("input[id='p']")).sendKeys("yanlisSifre" + Keys.ENTER);
         // Check for the presence of the error message
         List<WebElement> hata = driver.findElements(By.xpath("//button[@onclick='Modal_v8.close()']"));
         if (!hata.isEmpty()) {
