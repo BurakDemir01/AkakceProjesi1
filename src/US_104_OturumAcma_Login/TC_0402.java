@@ -1,18 +1,15 @@
 package US_104_OturumAcma_Login;
 
 import Utility.BaseDriver;
-import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 
-public class OturumAcma_Login extends BaseDriver {
+public class TC_0402 extends BaseDriver {
     @Test
     public void LoginTest(){
         driver.get("https://www.akakce.com/");
