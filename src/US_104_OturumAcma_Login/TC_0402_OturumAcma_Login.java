@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class TC_0402 extends BaseDriver {
+public class TC_0402_OturumAcma_Login extends BaseDriver {
     @Test
     public void LoginTest(){
         driver.get("https://www.akakce.com/");
