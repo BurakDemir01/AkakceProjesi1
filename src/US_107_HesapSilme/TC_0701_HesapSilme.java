@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-public class TC_0701 extends BaseDriver {
+public class TC_0701_HesapSilme extends BaseDriver {
     @Test
     public void TC_0701() {
         // Nagigate to website

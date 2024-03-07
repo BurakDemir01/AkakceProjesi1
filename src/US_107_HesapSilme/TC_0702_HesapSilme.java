@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class TC_0702 extends BaseDriver {
+public class TC_0702_HesapSilme extends BaseDriver {
     @Test
     public void TC_0702() {
         // Nagigate to website
