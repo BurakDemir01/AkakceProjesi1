@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 public class OturumAcma_Login extends BaseDriver {
     @Test
@@ -36,6 +37,7 @@ public class OturumAcma_Login extends BaseDriver {
 
         WebElement hesabim= driver.findElement(By.xpath("//a[text()='Hesabım']"));
 
+        //1.Yöntem
         //Assert.assertTrue("Giris yapilamadi",hesabim.getText().equals("Hesabım"));
 
         //2.Yöntem
@@ -43,6 +45,42 @@ public class OturumAcma_Login extends BaseDriver {
         wait.until(ExpectedConditions.urlToBe("https://www.akakce.com/akakcem/"));
         Assert.assertTrue("Giris yapilamadi",driver.getCurrentUrl().equals("https://www.akakce.com/akakcem/"));
 
+        BekleKapat();
+    }
+    @Test
+    public void EksikBilgiTest(){
+        driver.get("https://www.akakce.com/");
+        WebElement girisyap= driver.findElement(By.xpath("//a[text()='Giriş Yap']"));
+        girisyap.click();
+
+        WebElement eposta= driver.findElement(By.cssSelector("input[id='life']"));
+        eposta.sendKeys("SeleniumProject@gmail.com");
+
+        WebElement sifre= driver.findElement(By.cssSelector("input[id='lifp']"));
+        sifre.sendKeys("1234");
+
+        WebElement loginbutton=driver.findElement(By.cssSelector("input[id='lfb']"));
+        loginbutton.click();
+
+        WebElement hata= driver.findElement(By.xpath("//p[text()='Böyle bir kullanıcı yok.']"));
+
+        wait.until(ExpectedConditions.visibilityOf(hata));
+        Assert.assertTrue("Hatali sayfa girisi",hata.getText().equals("Böyle bir kullanıcı yok."));
+        BekleKapat();
+    }
+    @Test
+    public void NullDegerTest(){
+        driver.get("https://www.akakce.com/");
+        WebElement girisyap= driver.findElement(By.xpath("//a[text()='Giriş Yap']"));
+        girisyap.click();
+
+        WebElement loginbutton=driver.findElement(By.cssSelector("input[id='lfb']"));
+        loginbutton.click();
+
+        WebElement hatabutton= driver.findElement(By.xpath("//b[text()='Tamam']"));
+
+        wait.until(ExpectedConditions.elementToBeClickable(hatabutton));
+        Assert.assertTrue("Hatali sayfa yönlendirme",hatabutton.isDisplayed());
         BekleKapat();
     }
 }
